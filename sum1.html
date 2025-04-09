@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Grid Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #d4d4d4, #acacac, #bfbfbf, #e9e9e9);
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 80%;
+            max-width: 1000px;
+            justify-content: center;
+        }
+        .box {
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .box:nth-child(1) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+        .box:nth-child(2) { background: linear-gradient(135deg, #ffdde1, #ee9ca7); }
+        .box:nth-child(3) { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+        .box:nth-child(4) { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+        
+        .box:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .box h3 {
+            margin: 15px 0;
+            color: white;
+            font-size: 22px;
+        }
+        .box p {
+            font-size: 18px;
+            color: white;
+        }
+        .box button {
+            margin-top: 15px;
+            padding: 12px 18px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .box button:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="box">
+        <img src="https://res.cloudinary.com/zublu/image/fetch/f_webp,w_1200,q_auto/https://www.zubludiving.com/images/Maldives/General/Maldives-Scuba-Diving-banner_220302_090446.jpg" alt="Spring">
+        <h3>Maldives</h3>
+        <p> Crystal-clear waters, luxury resorts, and overwater bungalows.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://dr7f10k1l6bnm.cloudfront.net/wp-content/uploads/2023/05/untitled-design-55.png" alt="Summer">
+        <h3>Bali, Indonesia </h3>
+        <p> Beautiful beaches, lush rice terraces, and rich culture.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://img.imageboss.me/greca/width/3840/format:webp/5a214aaa378d8.jpeg" alt="Monsoon">
+        <h3>Santorini, GreeceMonsoon</h3>
+        <p> Stunning white-washed buildings, blue domes, and breathtaking sunsets.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://imgproxy.natucate.com/vLaoN2_Gp6ChOxj2EHg3lPryNVSIBm_HT5Y2NPV130c/rs:fill/g:ce/w:1780/h:1001/aHR0cHM6Ly93d3cubmF0dWNhdGUuY29tL21lZGlhL3BhZ2VzL2Jsb2cvcmF0Z2ViZXIvMzI1YTJiZmQtZTY4OC00NjI4LWE3YTEtN2MwMGUwZTljZThjLzdlYjc5NzE2MWMtMTY3OTQ4NTgwNC9ibG9nLXJhdGdlYmVyLXVzYS1oYXdhaWktbmFwYWxpLWNvZWFzdC1uYXR1Y2F0ZS5qcGc" alt="Autumn">
+        <h3>Hawaii, USA </h3>
+        <p>Surfing, volcano hikes, and tropical paradise vibes.</p>
+        <button>Learn More</button>
+    </div>
+</div>
+
+</body>
+</html>

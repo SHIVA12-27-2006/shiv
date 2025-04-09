@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Grid Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #d4d4d4, #acacac, #bfbfbf, #e9e9e9);
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 80%;
+            max-width: 1000px;
+            justify-content: center;
+        }
+        .box {
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .box:nth-child(1) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+        .box:nth-child(2) { background: linear-gradient(135deg, #ffdde1, #ee9ca7); }
+        .box:nth-child(3) { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+        .box:nth-child(4) { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+        
+        .box:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .box h3 {
+            margin: 15px 0;
+            color: white;
+            font-size: 22px;
+        }
+        .box p {
+            font-size: 18px;
+            color: white;
+        }
+        .box button {
+            margin-top: 15px;
+            padding: 12px 18px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .box button:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQeJ0kRFqW5U6RpOaGMUWzoEYxDxE_LUAAyXkZ34WkcNMSHzxCg3r49uk_NRwCM4NxksWV3s5Wg73k6ZeDawOGKvnrBefdYK3uU0RNHQg" alt="Spring">
+        <h3>Rajasthan, India </h3>
+        <p> Jaipur, Udaipur, Jaisalmer (Desert festivals, royal palaces)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipN-hfd18m27N11rRIy5dOKDUDPrw3ngpnRVPR-5=w675-h390-n-k-no" alt="mexico">
+        <h3>Mexico</h3>
+        <p>Cancun, Tulum (Day of the Dead celebrations, tropical beaches)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/e3/2c/72/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_b0d07eac99eb19e09edb" alt="Monsoon">
+        <h3>Germany</h3>
+        <p> Munich, Berlin (Christmas markets, festive vibes)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRcupypgJSCPFkTpFjWSUWIh750bD87oYl87hQhsU1iFx_H5Eh3L7Ftdb3iWmeGx_vLcnIeq-D4SISYOcY-itdp7Ds_vmcBYwBtxl9sQQ" alt="Autumn">
+        <h3>Austria</h3>
+        <p> Vienna, Salzburg (Classical concerts, Christmas charm)</p>
+        <button>Learn More</button>
+    </div>
+</div>
+
+</body>
+</html>

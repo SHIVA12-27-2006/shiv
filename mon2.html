@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Grid Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #d4d4d4, #acacac, #bfbfbf, #e9e9e9);
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 80%;
+            max-width: 1000px;
+            justify-content: center;
+        }
+        .box {
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .box:nth-child(1) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+        .box:nth-child(2) { background: linear-gradient(135deg, #ffdde1, #ee9ca7); }
+        .box:nth-child(3) { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+        .box:nth-child(4) { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+        
+        .box:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .box h3 {
+            margin: 15px 0;
+            color: white;
+            font-size: 22px;
+        }
+        .box p {
+            font-size: 18px;
+            color: white;
+        }
+        .box button {
+            margin-top: 15px;
+            padding: 12px 18px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .box button:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="box">
+        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/athirappilly-waterfalls-thrissur-kerala-2-attr-hero?qlt=82&ts=1726672842971" alt="Spring">
+        <h3>Athirapally, India</h3>
+        <p>The "Niagara of India" with breathtaking waterfalls</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Cataratas.jpg/1200px-Cataratas.jpg" alt="Summer">
+        <h3>Iguazu Falls, Brazil/Argentina</h3>
+        <p> Massive waterfalls surrounded by rainforests</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://www.insightvacations.com/wp-content/uploads/2023/09/Large-Plitvice-Lakes-National-Park-Waterfalls-Croatia-1004029948.jpg" alt="Monsoon">
+        <h3>Plitvice Lakes, Croatia </h3>
+        <p> Emerald lakes and cascading waterfalls</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://i.guim.co.uk/img/media/93e454aef4d984fd1d12464425052a4aa74b383a/0_76_5714_3430/master/5714.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=1e6d56eb62edeeef6d02e8a69e39b37c" alt="Autumn">
+        <h3>Chiang Mai, Thailand</h3>
+        <p> Cloud forests, elephant sanctuaries</p>
+        <button>Learn More</button>
+    </div>
+</div>
+
+</body>
+</html>

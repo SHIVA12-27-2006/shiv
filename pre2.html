@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Grid Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #d4d4d4, #acacac, #bfbfbf, #e9e9e9);
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 80%;
+            max-width: 1000px;
+            justify-content: center;
+        }
+        .box {
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .box:nth-child(1) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+        .box:nth-child(2) { background: linear-gradient(135deg, #ffdde1, #ee9ca7); }
+        .box:nth-child(3) { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+        .box:nth-child(4) { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+        
+        .box:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .box h3 {
+            margin: 15px 0;
+            color: white;
+            font-size: 22px;
+        }
+        .box p {
+            font-size: 18px;
+            color: white;
+        }
+        .box button {
+            margin-top: 15px;
+            padding: 12px 18px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .box button:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="box">
+        <img src="https://static.toiimg.com/thumb/msid-91025208,width-748,height-499,resizemode=4,imgsize-143956/.jpg" alt="Spring">
+        <h3>IVietnam</h3>
+        <p> Hanoi, Ha Long Bay (Pleasant climate, emerald waters)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTiRv2Z3Kt26hPUx2EpJ9EPL8_ysNAh1gQhXBE9DJHMtGa-prRA3VsuWt1UlGgst9tH1iTNRQq1WrqLagWRhkNXFhh-xvmJitKGeVeZ2w" alt="Summer">
+        <h3>Sri Lanka</h3>
+        <p>Ella, Nuwara Eliya (Tea plantations, misty hills)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://www.aupair.aifs.pl/wp-content/uploads/2021/07/clay-banks-IYLcwiyYUgc-unsplash-1024x683.jpg" alt="Monsoon">
+        <h3>Arizona, USA</h3>
+        <p>Grand Canyon, Sedona (Cool desert hikes, red rock views)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://lh5.googleusercontent.com/p/AF1QipPhTLRmpoyJnF_or8Ka6W6MM6uq0SeI-NmXiWvo=w675-h390-n-k-no" alt="Autumn">
+        <h3>Portugal </h3>
+        <p>Lisbon, Algarve (Sunshine, scenic coastlines)</p>
+        <button>Learn More</button>
+    </div>
+</div>
+
+</body>
+</html>

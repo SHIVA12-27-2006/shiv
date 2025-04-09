@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Six Seasons Grid</title>
+    <style>
+        *{
+            text-decoration: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            text-decoration: none;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 80%;
+            max-width: 1000px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .box h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .box p {
+            font-size: 16px;
+            color: #555;
+        }
+        .box button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .box button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="box">
+        <img src="https://images.contentstack.io/v3/assets/bltcedd8dbd5891265b/blt98532c54a724484a/6668d40fbf9bc579aa72e698/4603922-May-flowers.jpg?q=70&width=3840&auto=webp" alt="Spring">
+        <h3>Spring (Vasanta Ritu)</h3>
+        <p>Mid-March to Mid-May</p>
+        <button><a href="spring.html">Click me</a></button>
+    </div>
+    <div class="box">
+        <img src="https://www.goldenlotusmala.com/cdn/shop/articles/summer-solstice_1600x.jpg?v=1687359404" alt="Summer">
+        <h3>Summer (Grishma Ritu)</h3>
+        <p>Mid-May to Mid-July</p>
+        <button><a href="summer.html">Click me</a></button>
+    </div>
+    <div class="box">
+        <img src="https://www.indiaincredible.co.in/public/cache/monsoon-travel-tips-for-every-traveler_1140_x_335.webp" alt="Monsoon">
+        <h3>Monsoon (Varsha Ritu)</h3>
+        <p>Mid-July to Mid-September</p>
+        <button><a href="mosoon.html">Click me</a></button>
+    </div>
+    <div class="box">
+        <img src="https://plus.unsplash.com/premium_photo-1668967516060-624b8a7021f4?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YXV0dW1uJTIwbmF0dXJlfGVufDB8fDB8fHww" alt="Autumn">
+        <h3>Autumn (Sharad Ritu)</h3>
+        <p>Mid-September to Mid-November</p>
+        <button><a href="autom.html">Click me</a></button>
+    </div>
+    <div class="box">
+        <img src="https://pbs.twimg.com/media/Dsg8-FhU0AAfwAd.jpg" alt="Pre-Winter">
+        <h3>Pre-Winter (Hemanta Ritu)</h3>
+        <p>Mid-November to Mid-January</p>
+        <button><a href="prewinter.html">Click me</a></button>
+    </div>
+    <div class="box">
+        <img src="https://plus.unsplash.com/premium_photo-1670493556860-13e006e6faa4?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2ludGVyfGVufDB8fDB8fHww" alt="Winter">
+        <h3>Winter (Shishir Ritu)</h3>
+        <p>Mid-January to Mid-March</p>
+        <button><a href="winter.html">Click me</a></button>
+    </div>
+</div>
+
+</body>
+</html>

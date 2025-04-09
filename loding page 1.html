@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            padding: 40px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 192, 203, 0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            text-align: center;
+            color: #000;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 2px solid #000;
+            border-radius: 25px;
+            outline: none;
+            font-size: 16px;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .input-box input:focus {
+            border-color: #ff69b4;
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+        }
+
+        .input-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #000;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .input-box input:focus + i {
+            color: #ff69b4;
+        }
+
+        .input-box .border-animation {
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 0;
+            height: 100%;
+            border: 2px solid #ff69b4;
+            border-radius: 25px;
+            pointer-events: none;
+            transition: width 0.4s ease;
+        }
+
+        .input-box input:focus ~ .border-animation {
+            width: calc(100% + 4px);
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            color: #000;
+        }
+
+        .checkbox input {
+            margin-right: 10px;
+            accent-color: #ff69b4;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ff69b4;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+        }
+
+        .error {
+            color: #ff69b4;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return validateForm(event)">
+            <div class="input-box">
+                <input type="text" id="name" placeholder="Name" required>
+                <i class="fas fa-user"></i>
+                <span class="border-animation"></span>
+            </div>
+            <div class="input-box">
+                <input type="email" id="email" placeholder="Email" required>
+                <i class="fas fa-envelope"></i>
+                <span class="border-animation"></span>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="ageCheck" required>
+                <label for="ageCheck">I am 16+ years old</label>
+            </div>
+            <button type="submit" class="btn"><a href="index.html">Login</a></button>
+            
+            <div class="error" id="errorMsg"></div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const ageCheck = document.getElementById('ageCheck').checked;
+            const errorMsg = document.getElementById('errorMsg');
+
+            // Simple email validation
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name.length < 2) {
+                showError('Name must be at least 2 characters');
+                return false;
+            } else if (!emailPattern.test(email)) {
+                showError('Please enter a valid email');
+                return false;
+            } else if (!ageCheck) {
+                showError('You must be 16+ to proceed');
+                return false;
+            } else {
+                errorMsg.style.display = 'none';
+                alert('Login successful! Welcome ' + name);
+                return true;
+            }
+        }
+
+        function showError(message) {
+            const errorMsg = document.getElementById('errorMsg');
+            errorMsg.textContent = message;
+            errorMsg.style.display = 'block';
+            errorMsg.style.animation = 'shake 0.5s';
+            
+            // Add shake animation
+            const styleSheet = document.styleSheets[0];
+            styleSheet.insertRule(`
+                @keyframes shake {
+                    0% { transform: translateX(0); }
+                    25% { transform: translateX(-5px); }
+                    50% { transform: translateX(5px); }
+                    75% { transform: translateX(-5px); }
+                    100% { transform: translateX(0); }
+                }
+            `, styleSheet.cssRules.length);
+        }
+
+        // Add hover animation to inputs
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('mouseover', () => {
+                input.style.transform = 'scale(1.02)';
+            });
+            input.addEventListener('mouseout', () => {
+                input.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

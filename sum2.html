@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Grid Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #d4d4d4, #acacac, #bfbfbf, #e9e9e9);
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 80%;
+            max-width: 1000px;
+            justify-content: center;
+        }
+        .box {
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .box:nth-child(1) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+        .box:nth-child(2) { background: linear-gradient(135deg, #ffdde1, #ee9ca7); }
+        .box:nth-child(3) { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+        .box:nth-child(4) { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+        
+        .box:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .box h3 {
+            margin: 15px 0;
+            color: white;
+            font-size: 22px;
+        }
+        .box p {
+            font-size: 18px;
+            color: white;
+        }
+        .box button {
+            margin-top: 15px;
+            padding: 12px 18px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .box button:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="box">
+        <img src="https://images.squarespace-cdn.com/content/v1/5c0f0e23af209675771265b8/1726828311924-UULKAMGA9PQYY6NDM61T/unsplash-image-qZBZb-G0eEU.jpg" alt="Spring">
+        <h3>Swiss Alps, Switzerland </h3>
+        <p>Stunning hikes, scenic train rides, and summer skiing.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://cdn.britannica.com/89/104889-050-A3D26337/Moraine-Lake-Banff-National-Park.jpg" alt="Summer">
+        <h3>Banff National Park, Canada </h3>
+        <p>Glacial lakes, wildlife, and breathtaking hiking trails</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://cdn.kimkim.com/files/a/content_articles/featured_photos/db08e8b1250199abd96d1971d94d596e568d9cfb/big-f2eb46e7f70d8bfdd2595cfd5db68809.jpg" alt="Monsoon">
+        <h3?>Patagonia, Argentina & Chile</h3>
+        <p> Snow-capped peaks, glaciers, and untouched nature.</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://mominitaly.com/wp-content/uploads/2023/04/passo-giau-dolomites-italy-scaled.jpeg" alt="Autumn">
+        <h3>Dolomites, Italy </h3>
+        <p> Ideal for mountain climbing, road trips, and scenic villages.</p>
+        <button>Learn More</button>
+    </div>
+</div>
+
+</body>
+</html>

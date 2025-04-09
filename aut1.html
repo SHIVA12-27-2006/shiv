@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Grid Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #d4d4d4, #acacac, #bfbfbf, #e9e9e9);
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 80%;
+            max-width: 1000px;
+            justify-content: center;
+        }
+        .box {
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .box:nth-child(1) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+        .box:nth-child(2) { background: linear-gradient(135deg, #ffdde1, #ee9ca7); }
+        .box:nth-child(3) { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+        .box:nth-child(4) { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+        
+        .box:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .box h3 {
+            margin: 15px 0;
+            color: white;
+            font-size: 22px;
+        }
+        .box p {
+            font-size: 18px;
+            color: white;
+        }
+        .box button {
+            margin-top: 15px;
+            padding: 12px 18px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .box button:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="box">
+        <img src="https://strapi-imaginary.weroad.it/resource/large/13118/travel-trip-castle-japan-osaka.jpeg" alt="Spring">
+        <h3>Japan</h3>
+        <p> Kyoto, Nikko, Hokkaido (Vibrant maple and ginkgo leaves, serene temples)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://iso.500px.com/wp-content/uploads/2015/09/fall_cover1.jpeg" alt="Summer">
+        <h3>USA</h3>
+        <p>Vermont, New York (Central Park), Great Smoky Mountains (Golden and red forests)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://travel.destinationcanada.com/_next/image?url=https%3A%2F%2Fadmin.destinationcanada.com%2Fsites%2Fdefault%2Ffiles%2Fimages%2Farticle%2F1_algonquin-provincial-park-ontario_credit_canadian-tourism-commission.jpg&w=1920&q=75" alt="Monsoon">
+        <h3>Canda</h3>
+        <p>Quebec, Ontario, Banff National Park (Fiery maple leaves, lakes, mountains)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://www.travelandleisure.com/thmb/HDGpaa9IBKgK71w7UDgoAZXesC4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-rothenburg-ob-der-tauber-PLACESGER0623-a9378cf8ee2b45be96e72e662597a036.jpg" alt="Autumn">
+        <h3>Germany</h3>
+        <p>Black Forest, Bavaria (Romantic roads, fairytale villages)</p>
+        <button>Learn More</button>
+    </div>
+</div>
+
+</body>
+</html>

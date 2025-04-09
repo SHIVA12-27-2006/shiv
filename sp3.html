@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Grid Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #d4d4d4, #acacac, #bfbfbf, #e9e9e9);
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 80%;
+            max-width: 1000px;
+            justify-content: center;
+        }
+        .box {
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .box:nth-child(1) { background: linear-gradient(135deg, #ff9a9e, #fad0c4); }
+        .box:nth-child(2) { background: linear-gradient(135deg, #ffdde1, #ee9ca7); }
+        .box:nth-child(3) { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+        .box:nth-child(4) { background: linear-gradient(135deg, #fbc2eb, #a6c1ee); }
+        
+        .box:hover {
+            transform: scale(1.08);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .box h3 {
+            margin: 15px 0;
+            color: white;
+            font-size: 22px;
+        }
+        .box p {
+            font-size: 18px;
+            color: white;
+        }
+        .box button {
+            margin-top: 15px;
+            padding: 12px 18px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .box button:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="box">
+        <img src="https://static.toiimg.com/thumb/112523375/spain.jpg?width=1200&height=900" alt="Spring">
+        <h3>Spain</h3>
+        <p>Seville, Barcelona (Semana Santa, Feria de Abril)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://www.micato.com/wp-content/uploads/2018/11/varanasi-1-1110x700.jpg" alt="Summer">
+        <h3>India</h3>
+        <p> Jaipur, Delhi, Varanasi (Holi Festival, vibrant streets)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://cdn.britannica.com/61/179661-138-6F13E02A/Overview-Athens.jpg?w=800&h=450&c=crop" alt="Monsoon">
+        <h3>Greece</h3>
+        <p> Athens, Santorini (Historical sites, blue waters, mild climate)</p>
+        <button>Learn More</button>
+    </div>
+    <div class="box">
+        <img src="https://static.toiimg.com/thumb/71631199/Turkey.jpg?width=636&height=358&resize=4" alt="Autumn">
+        <h3>Turkey</h3>
+        <p> Istanbul, Cappadocia (Balloon rides, blooming landscapes)</p>
+        <button>Learn More</button>
+    </div>
+</div>
+
+</body>
+</html>
